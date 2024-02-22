@@ -51,9 +51,8 @@
 		4024C3552B87ABBA005CF528 /* NanoChallenge05 */ = {
 			isa = PBXGroup;
 			children = (
-				4024C3562B87ABBA005CF528 /* NanoChallenge05App.swift */,
-				4024C3582B87ABBA005CF528 /* ContentView.swift */,
-				4024C35A2B87ABBB005CF528 /* Assets.xcassets */,
+				4024C3652B87AD12005CF528 /* Views */,
+				4024C3642B87AD00005CF528 /* App */,
 				4024C35C2B87ABBB005CF528 /* Preview Content */,
 			);
 			path = NanoChallenge05;
@@ -65,6 +64,23 @@
 				4024C35D2B87ABBB005CF528 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4024C3642B87AD00005CF528 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4024C35A2B87ABBB005CF528 /* Assets.xcassets */,
+				4024C3562B87ABBA005CF528 /* NanoChallenge05App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4024C3652B87AD12005CF528 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4024C3582B87ABBA005CF528 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
