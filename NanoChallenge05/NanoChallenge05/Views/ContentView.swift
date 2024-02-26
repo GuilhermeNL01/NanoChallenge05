@@ -1,21 +1,47 @@
 //
 //  ContentView.swift
-//  NanoChallenge05
+//  CoreMLTestApplication
 //
-//  Created by Guilherme Nunes Lobo on 22/02/24.
+//  Created by João Ângelo on 20/02/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showModal = false
+    @State private var prompt: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack{
+            TextEditor(text: $prompt)
+                .lineSpacing(5)
+                .autocapitalization(.words)
+                .disableAutocorrection(false)
+                .padding()
+            Button("Submit"){
+                showModal.toggle()
+            }
+            .padding()
+            .sheet(isPresented: $showModal){
+                SheetView()
+            }
         }
+    }
+}
+
+struct SheetView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        Button("Cancel"){
+            dismiss()
+                
+        }
+        .font(.title)
         .padding()
+        .frame(alignment: .topLeading)
+        Spacer()
+        
     }
 }
 
