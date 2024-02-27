@@ -11,6 +11,7 @@
 		4024C3592B87ABBA005CF528 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024C3582B87ABBA005CF528 /* ContentView.swift */; };
 		4024C35B2B87ABBB005CF528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4024C35A2B87ABBB005CF528 /* Assets.xcassets */; };
 		4024C35E2B87ABBB005CF528 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4024C35D2B87ABBB005CF528 /* Preview Assets.xcassets */; };
+		4024C3762B8E429E005CF528 /* AITextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4024C3582B87ABBA005CF528 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4024C35A2B87ABBB005CF528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4024C35D2B87ABBB005CF528 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AITextClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		4024C3552B87ABBA005CF528 /* NanoChallenge05 */ = {
 			isa = PBXGroup;
 			children = (
+				4024C36C2B87C1D9005CF528 /* Model */,
 				4024C3652B87AD12005CF528 /* Views */,
 				4024C3642B87AD00005CF528 /* App */,
 				4024C35C2B87ABBB005CF528 /* Preview Content */,
@@ -81,6 +84,14 @@
 				4024C3582B87ABBA005CF528 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4024C36C2B87C1D9005CF528 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				4024C3592B87ABBA005CF528 /* ContentView.swift in Sources */,
 				4024C3572B87ABBA005CF528 /* NanoChallenge05App.swift in Sources */,
+				4024C3762B8E429E005CF528 /* AITextClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
