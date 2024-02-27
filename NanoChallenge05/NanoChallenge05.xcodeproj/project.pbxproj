@@ -12,6 +12,8 @@
 		4024C35B2B87ABBB005CF528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4024C35A2B87ABBB005CF528 /* Assets.xcassets */; };
 		4024C35E2B87ABBB005CF528 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4024C35D2B87ABBB005CF528 /* Preview Assets.xcassets */; };
 		4024C3762B8E429E005CF528 /* AITextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */; };
+		43092FB42B8E586B00F38FD4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43092FB32B8E586B00F38FD4 /* OnboardingView.swift */; };
+		43092FB62B8E58D900F38FD4 /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43092FB52B8E58D900F38FD4 /* OnboardingStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		4024C35A2B87ABBB005CF528 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4024C35D2B87ABBB005CF528 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AITextClassifier.mlmodel; sourceTree = "<group>"; };
+		43092FB32B8E586B00F38FD4 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		43092FB52B8E58D900F38FD4 /* OnboardingStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4024C3582B87ABBA005CF528 /* ContentView.swift */,
+				43092FB32B8E586B00F38FD4 /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4024C3752B8E429E005CF528 /* AITextClassifier.mlmodel */,
+				43092FB52B8E58D900F38FD4 /* OnboardingStep.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4024C3592B87ABBA005CF528 /* ContentView.swift in Sources */,
+				43092FB42B8E586B00F38FD4 /* OnboardingView.swift in Sources */,
 				4024C3572B87ABBA005CF528 /* NanoChallenge05App.swift in Sources */,
+				43092FB62B8E58D900F38FD4 /* OnboardingStep.swift in Sources */,
 				4024C3762B8E429E005CF528 /* AITextClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = M9H5R689TD;
+				DEVELOPMENT_TEAM = LF887LSVNZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -329,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = M9H5R689TD;
+				DEVELOPMENT_TEAM = LF887LSVNZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

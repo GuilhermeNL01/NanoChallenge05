@@ -13,20 +13,33 @@ struct ContentView: View {
     @State private var promptOut: String = ""
     
     var body: some View {
-        VStack{
-            TextEditor(text: $prompt)
-                .lineSpacing(5)
-                .autocapitalization(.words)
-                .disableAutocorrection(false)
+        GeometryReader { geometry in
+            VStack{
+                ZStack {
+                    if prompt.isEmpty{
+                        Text("Insert your prompt here...")
+                            
+                    }
+                    TextEditor(text: $prompt)
+                        .textEditorStyle(.plain)
+                        .background(Color.editorGrey)
+                        .cornerRadius(20)
+                        .multilineTextAlignment(.leading)
+                        .lineSpacing(5)
+                        .autocapitalization(.words)
+                        .disableAutocorrection(false)
+                        .frame(width: 356, height: 314)
+                        .offset(CGSize(width: 0, height: -20))
+                }
+                Button("Analyze"){
+                    classify()
+                }
+                .buttonStyle(GrowingButton())
                 .padding()
-            Button("Submit"){
-                showModal.toggle()
-                classify()
-            }
-            .padding()
-            .sheet(isPresented: $showModal){
-                SheetView()
-            }
+                .frame(width: 140, height: 34)
+            }.frame(width: geometry.size.width, height: geometry.size.height)
+            .background(Color.backBlack)
+        .navigationBarBackButtonHidden()
         }
     }
     func classify(){
@@ -41,19 +54,16 @@ struct ContentView: View {
     }
 }
 
-struct SheetView: View {
-    @Environment(\.dismiss) var dismiss
-    
-    var body: some View {
-        Button("Cancel"){
-            dismiss()
-                
-        }
-        .font(.title)
-        .padding()
-        .frame(alignment: .topLeading)
-        Spacer()
-        
+struct GrowingButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(Color.blueGreen)
+            .foregroundStyle(Color.backBlack)
+            .font(.custom("SF-Pro-Display", size: 16))
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
 
