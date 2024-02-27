@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showModal = false
     @State private var prompt: String = ""
+    @State private var promptOut: String = ""
     
     var body: some View {
         VStack{
@@ -20,12 +21,23 @@ struct ContentView: View {
                 .padding()
             Button("Submit"){
                 showModal.toggle()
+                classify()
             }
             .padding()
             .sheet(isPresented: $showModal){
                 SheetView()
             }
         }
+    }
+    func classify(){
+        do{
+            let model = try AITextClassifier(configuration: .init())
+            let prediction = try model.prediction(text: prompt)
+            prompt = prediction.label
+        } catch {
+            promptOut = "Something is wrong"
+        }
+        showModal = true
     }
 }
 
