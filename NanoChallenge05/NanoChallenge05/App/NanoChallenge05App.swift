@@ -11,7 +11,7 @@ import SwiftUI
 struct NanoChallenge05App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
