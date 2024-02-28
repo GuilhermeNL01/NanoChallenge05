@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct NanoChallenge05App: App {
+    @AppStorage("isOnboarding") var isOnboarding = true
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            if isOnboarding{
+                OnboardingView()
+            } else {
+                ContentView()
+            }
         }
     }
 }

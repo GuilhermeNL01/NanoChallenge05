@@ -34,13 +34,14 @@ struct ContentView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .foregroundStyle(contentViewModel.teColor)
                         }
-                        .padding()
+                        .padding(20)
                         .textEditorStyle(.plain)
-                        .frame(width: geometry.size.width - 52, height: geometry.size.height - 450)
+                        .frame(width: geometry.size.width, height: 307)
                     if contentViewModel.prompt.isEmpty{
                         Text("Insert your prompt here!")
                             .foregroundStyle(.gray)
-                            .padding(36)
+                            .padding(.top, 42)
+                            .padding(.leading, 36)
                     }
                 }
                 if contentViewModel.isDoneAnalyzing{

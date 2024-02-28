@@ -15,13 +15,14 @@ private let onboardingSteps = [
 struct OnboardingView: View {
     @State private var prompt: String = ""
     @State private var currentStep = 0
+    @AppStorage("isOnboarding") private var isOnboarding: Bool?
     
     init() {
         UIScrollView.appearance().bounces = false
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 TabView(selection: $currentStep) {
                     ForEach(0..<onboardingSteps.count) { it in
@@ -75,6 +76,9 @@ struct OnboardingView: View {
                         .cornerRadius(10)
                 }
                 .padding(.bottom, 20)
+                .onDisappear{
+                    isOnboarding = false
+                }
             }
             .background(Color.backBlack)
         }
