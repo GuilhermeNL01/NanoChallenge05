@@ -8,49 +8,65 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var showModal = false
-    @State private var prompt: String = ""
-    @State private var promptOut: String = ""
+    @ObservedObject private var contentViewModel = ContentViewModel()
     
     var body: some View {
         GeometryReader { geometry in
             VStack{
-                ZStack {
-                    if prompt.isEmpty{
-                        Text("Insert your prompt here...")
-                            
+                Text("APP NAME HERE")
+                    .font(.system(size: 20, weight: .black))
+                    .foregroundStyle(.white)
+                if contentViewModel.isDoneAnalyzing || contentViewModel.promptOutIsEmpty{
+                    withAnimation(.easeInOut){
+                        contentViewModel.promptOut
+                            .foregroundStyle(.white)
                     }
-                    TextEditor(text: $prompt)
-                        .textEditorStyle(.plain)
-                        .background(Color.editorGrey)
-                        .cornerRadius(20)
-                        .multilineTextAlignment(.leading)
+                }
+                ZStack(alignment: .topLeading){
+                    TextEditor(text: $contentViewModel.prompt)
                         .lineSpacing(5)
                         .autocapitalization(.words)
                         .disableAutocorrection(false)
-                        .frame(width: 356, height: 314)
-                        .offset(CGSize(width: 0, height: -20))
+                        .foregroundStyle(.white)
+                        .disabled(contentViewModel.isDoneAnalyzing)
+                        .padding(12)
+                        .background{
+                            RoundedRectangle(cornerRadius: 20)
+                                .foregroundStyle(contentViewModel.teColor)
+                        }
+                        .padding()
+                        .textEditorStyle(.plain)
+                        .frame(width: geometry.size.width - 52, height: geometry.size.height - 450)
+                    if contentViewModel.prompt.isEmpty{
+                        Text("Insert your prompt here!")
+                            .foregroundStyle(.gray)
+                            .padding(36)
+                    }
                 }
-                Button("Analyze"){
-                    classify()
+                if contentViewModel.isDoneAnalyzing{
+                    Button{
+                        contentViewModel.refresh()
+                    } label: {
+                        HStack {
+                            Text("Refresh")
+                        Image(systemName: "arrow.clockwise")
+                        }
+                    }
+                    .buttonStyle(GrowingButton())
+                    .padding()
+                    Spacer()
+                } else {
+                    Button("Analyze"){
+                        contentViewModel.classify()
+                    }
+                    .buttonStyle(GrowingButton())
+                    .padding()
+                    Spacer()
                 }
-                .buttonStyle(GrowingButton())
-                .padding()
-                .frame(width: 140, height: 34)
             }.frame(width: geometry.size.width, height: geometry.size.height)
             .background(Color.backBlack)
         .navigationBarBackButtonHidden()
         }
-    }
-    func classify(){
-        do{
-            let model = try AITextClassifier(configuration: .init())
-            let prediction = try model.prediction(text: prompt)
-            prompt = prediction.label
-        } catch {
-            promptOut = "Something is wrong"
-        }
-        showModal = true
     }
 }
 
@@ -60,7 +76,8 @@ struct GrowingButton: ButtonStyle {
             .padding()
             .background(Color.blueGreen)
             .foregroundStyle(Color.backBlack)
-            .font(.custom("SF-Pro-Display", size: 16))
+            .font(.custom("SF-Pro-Display",size: 16))
+            .fontWeight(.semibold)
             .clipShape(Capsule())
             .scaleEffect(configuration.isPressed ? 1.2 : 1)
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)

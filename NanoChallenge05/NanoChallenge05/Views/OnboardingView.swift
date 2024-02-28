@@ -8,12 +8,11 @@
 import SwiftUI
 
 private let onboardingSteps = [
-    OnboardingStep(image: "Image", title: "IA Buster", description: "The IA buster is an APP that uses Machine Learning to identify if a text is made by an IA or by a legit person."),
+    OnboardingStep(image: "Image", title: "IA Buster", description: "The IA buster is an APP that uses Machine Learning to identify if a text is either made by an AI or a legit person."),
     OnboardingStep(image: "Image", title: "Human Text", description: " When you submit your text a message will be displayed telling the difference."),
     OnboardingStep(image: "Image", title: "IA Text", description: "The IA buster can tell if the author of your text is a IA or a human with amazing precision")
 ]
 struct OnboardingView: View {
-    @State private var showModal = false
     @State private var prompt: String = ""
     @State private var currentStep = 0
     

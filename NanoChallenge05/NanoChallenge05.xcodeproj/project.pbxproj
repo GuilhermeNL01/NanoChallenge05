@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31D909B42B8E681300920E5F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D909B32B8E681300920E5F /* ContentViewModel.swift */; };
 		4024C3572B87ABBA005CF528 /* NanoChallenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024C3562B87ABBA005CF528 /* NanoChallenge05App.swift */; };
 		4024C3592B87ABBA005CF528 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024C3582B87ABBA005CF528 /* ContentView.swift */; };
 		4024C35B2B87ABBB005CF528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4024C35A2B87ABBB005CF528 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31D909B32B8E681300920E5F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		4024C3532B87ABBA005CF528 /* NanoChallenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4024C3562B87ABBA005CF528 /* NanoChallenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoChallenge05App.swift; sourceTree = "<group>"; };
 		4024C3582B87ABBA005CF528 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4024C3582B87ABBA005CF528 /* ContentView.swift */,
+				31D909B32B8E681300920E5F /* ContentViewModel.swift */,
 				43092FB32B8E586B00F38FD4 /* OnboardingView.swift */,
 			);
 			path = Views;
@@ -172,6 +175,7 @@
 			files = (
 				4024C3592B87ABBA005CF528 /* ContentView.swift in Sources */,
 				43092FB42B8E586B00F38FD4 /* OnboardingView.swift in Sources */,
+				31D909B42B8E681300920E5F /* ContentViewModel.swift in Sources */,
 				4024C3572B87ABBA005CF528 /* NanoChallenge05App.swift in Sources */,
 				43092FB62B8E58D900F38FD4 /* OnboardingStep.swift in Sources */,
 				4024C3762B8E429E005CF528 /* AITextClassifier.mlmodel in Sources */,
@@ -308,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = LF887LSVNZ;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoChallenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = LF887LSVNZ;
+				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
