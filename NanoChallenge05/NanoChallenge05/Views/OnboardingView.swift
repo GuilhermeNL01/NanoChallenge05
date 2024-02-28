@@ -8,9 +8,10 @@
 import SwiftUI
 
 private let onboardingSteps = [
-    OnboardingStep(image: "Image", title: "IA Buster", description: "The IA buster is an APP that uses Machine Learning to identify if a text is either made by an AI or a legit person."),
-    OnboardingStep(image: "Image", title: "Human Text", description: " When you submit your text a message will be displayed telling the difference."),
-    OnboardingStep(image: "Image", title: "IA Text", description: "The IA buster can tell if the author of your text is a IA or a human with amazing precision")
+    OnboardingStep(image: "first", title: "AI Buster", description: "Hi, I'm Roger! I'm your assistant through the AI Buster application. Today, I'll be showing you how it wokrks..."),
+    OnboardingStep(image: "confused", title: "How it Works ?", description: " When you submit your text, a message will be displayed telling you if your text was written by a HUMAN or an AI."),
+    OnboardingStep(image: "happy", title: "Human Text", description: "If HUMAN, the text area will become GREEN."),
+    OnboardingStep(image: "angry", title: "AI Text", description: "If written by an AI, the text will become RED.")
 ]
 struct OnboardingView: View {
     @State private var prompt: String = ""
@@ -28,8 +29,8 @@ struct OnboardingView: View {
                         VStack {
                             Image(onboardingSteps[it].image)
                                 .resizable()
-                                .frame(width: 350, height: 350)
-                            
+                                .frame(width: 400, height: 400)
+                                
                             Text(onboardingSteps[it].title)
                                 .font(.title)
                                 .bold()
