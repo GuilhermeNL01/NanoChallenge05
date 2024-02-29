@@ -8,9 +8,9 @@
 import SwiftUI
 
 private let onboardingSteps = [
-    OnboardingStep(image: "first", title: "AI Buster", description: "Hi, I'm Roger! I'm your assistant through the AI Buster application. Today, I'll be showing you how it wokrks..."),
+    OnboardingStep(image: "first", title: "AI Buster", description: "Hi, I'm Roger! I'm your assistant through the AI Buster application. Today, I'll be showing you how it works..."),
     OnboardingStep(image: "confused", title: "How it Works ?", description: " When you submit your text, a message will be displayed telling you if your text was written by a HUMAN or an AI."),
-    OnboardingStep(image: "happy", title: "Human Text", description: "If HUMAN, the text area will become GREEN."),
+    OnboardingStep(image: "happy", title: "Human Text", description: "If written by a HUMAN, the text area will become GREEN."),
     OnboardingStep(image: "angry", title: "AI Text", description: "If written by an AI, the text will become RED.")
 ]
 struct OnboardingView: View {
