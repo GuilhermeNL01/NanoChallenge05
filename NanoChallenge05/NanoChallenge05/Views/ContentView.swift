@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack{
-                Text("APP NAME HERE")
+                Text("AI BUSTER")
                     .font(.system(size: 20, weight: .black))
                     .foregroundStyle(.white)
                 if contentViewModel.isDoneAnalyzing || contentViewModel.promptOutIsEmpty{
