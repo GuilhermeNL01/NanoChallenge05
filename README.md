@@ -2,7 +2,7 @@
 
 # AI Buster
 
-** AI Buster ** é um aplicativo iOS que analisa e identifica se um texto foi gerado por uma Inteligência Artificial ou por um ser humano. O modelo de machine learning usado para essa verificação foi treinado no **CreateML** da Apple, proporcionando alta precisão e eficiência.
+**Ai Buster** é um aplicativo iOS que analisa e identifica se um texto foi gerado por uma Inteligência Artificial ou por um ser humano. O modelo de machine learning usado para essa verificação foi treinado no **CreateML** da Apple, proporcionando alta precisão e eficiência.
 
 ## Funcionalidades
 
