@@ -34,21 +34,21 @@
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/AI-Text-Detector.git
+   git https://github.com/GuilhermeNL01/NanoChallenge05.git
    ```
 
 2. Abra o projeto no Xcode:
 
    ```bash
-   cd AI-Text-Detector
-   open AITextDetector.xcodeproj
+   cd NanoChallenge05
+   open NanoChallenge05.xcodeproj
    ```
 
 3. Compile e execute o projeto no simulador ou em um dispositivo real.
 
 ## Modelo de Machine Learning
 
-O modelo foi treinado no **CreateML** com um conjunto de dados contendo textos gerados por IA e humanos. O modelo utiliza técnicas de processamento de linguagem natural (NLP) para classificar o texto de entrada. 
+O modelo foi treinado no **CreateML** com um conjunto de dados contendo textos gerados por IA e humanos.
 
 ## Contribuindo
 
